@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="layout">
+        <div id="title">
+        </div>
+        <table>
+            <tr>
+                <th>일</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th>토</th>
+            </tr>
+            <tr id="firstWeek">
+            </tr>
+            <tr id="secondWeek">
+            </tr>
+            <tr id="thirdWeek">
+            </tr>
+            <tr id="fourthWeek">
+            </tr>
+            <tr id="fifthWeek">
+            </tr>
+        </table>
+    </div>
+
+    <script type="module"src="../index.js"></script>
+</body>
+<style>
+    body {
+        margin: 5%;
+    }
+    #layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    table {
+        margin-top: 5%;
+    }
+    th, td {
+        padding: 10px 30px;
+        text-align: center;
+        border: 1px solid black;
+        font-size: 20px;
+    }
+    th:nth-child(1), td:nth-child(1) {
+        color: red;
+    }
+    th:nth-child(7), td:nth-child(7) {
+        color: blue;
+    }
+</style>
+</html>
