@@ -9,10 +9,7 @@ const lastDate = fullLastDate.getDate();
 
 const body = () => {
     // 첫 주의 배열
-    // const firstDay = fullFirstDate.getDay(); // 1(monday)
     const firstWeek = [];
-    // let lastDayOfFirstWeek = null; 
-
     for (let i = 0; i < firstDate; i++) {
         firstWeek.push("");
     }
@@ -55,35 +52,18 @@ const body = () => {
     }
 
     // 배열 전달
-    let firstArr = '';
-    for (let i = 0; i < 7; i++) {
-        firstArr += `<td> ${firstWeek[i]} </td>`
-    }
-    document.getElementById('firstWeek').innerHTML = firstArr;
+    
+    const weeks = [ firstWeek, secondWeek, thirdWeek, fourthWeek, fifthWeek ];
+    const weekList = document.querySelectorAll('.week');
 
-    let secondArr = '';
-    for (let i = 0; i < 7; i++) {
-        secondArr += `<td> ${secondWeek[i]} </td>`
-    }
-    document.getElementById('secondWeek').innerHTML = secondArr;
-
-    let thirdArr = '';
-    for (let i = 0; i < 7; i++) {
-        thirdArr += `<td> ${thirdWeek[i]} </td>`
-    }
-    document.getElementById('thirdWeek').innerHTML = thirdArr;
-
-    let fourthArr = '';
-    for (let i = 0; i < 7; i++) {
-        fourthArr += `<td> ${fourthWeek[i]} </td>`
-    }
-    document.getElementById('fourthWeek').innerHTML = fourthArr;
-
-    let fifthArr = '';
-    for (let i = 0; i < 7; i++) {
-        fifthArr += `<td> ${fifthWeek[i]} </td>`
-    }
-    document.getElementById('fifthWeek').innerHTML = fifthArr;
+    weekList.forEach((w, i) => {
+        let weekArr = '';
+        for (let j = 0; j < 7; j++) {
+            weekArr += `<td> ${weeks[i][j]} </td>`;
+        }
+        console.log(weekArr);
+        w.innerHTML = weekArr;
+    })
 } 
 
 export default body;
