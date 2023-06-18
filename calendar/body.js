@@ -61,7 +61,6 @@ const body = () => {
         for (let j = 0; j < 7; j++) {
             weekArr += `<td> ${weeks[i][j]} </td>`;
         }
-        console.log(weekArr);
         w.innerHTML = weekArr;
     })
 } 

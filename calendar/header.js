@@ -1,4 +1,4 @@
-const today = new Date('2023-05');
+const today = new Date();
 const currentMonth = today.getMonth() + 1;
 
 const header = () => {
